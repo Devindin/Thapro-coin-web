@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,500&family=Playfair+Display:ital@1&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap');
+       *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        body{
+            flex-direction: column;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        
+
+        html{
+            height: 100%;
+        }
+        .container
+        {
+            width: 85%;
+            min-height: 100vh;
+            background-image: url(a.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 10px 8%;
+            flex-direction: column;
+            display: flex;
+            
+        }
+
+        nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0;
+        }
+
+        .logo{
+            width: 180px;
+            cursor: pointer;
+        }
+
+        nav ul{
+            list-style: none;
+            width: 100%;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            margin: 10px 20px;
+
+        }
+
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn{
+            align-items: center;
+            color: #fff;
+            padding: 10px 20px;
+            background:transparent;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+
+.transaction .amount h2,
+.transaction .amount p
+{
+  color: #fff;
+  text-align: center;
+}
+
+
+
+h4 {
+    margin-left: 20%;
+    color: #fff;
+}
+
+.icons .box
+        {
+          position: relative;
+          padding: 20px 0;
+          display: flex;
+        }
+
+
+        .icons .box .icon 
+        {
+         min-width: 60px;
+         height: 60px;
+         background: #fff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         font-size: 22px;
+        }
+
+.table1
+{
+  width: 600px;
+  height: 80px;
+  margin-left: 30%;
+}
+
+.table1 td
+{
+  width: 150px;
+  height: 40px;
+ 
+  
+}
+.table1 td h4
+{
+  color: #fff;
+
+}
+
+.table2
+{
+  width: 600px;
+  height: 30px;
+  margin-left: 30%;
+}
+
+.table2 .buttonbox2
+{
+  width: 180px;
+  height: 30px;
+}
+
+
+.resent-trans
+{
+  width: 600px;
+  height: 200px;
+  color: #fff;
+}
+
+
+
+    .resent-trans th {
+      background-color: #54a0ff;
+      color: #fff;
+    }
+
+  
+    .resent-trans {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .resent-trans th, td {
+     
+      padding: 12px;
+      text-align: left;
+    }
+
+
+
+
+.buttonbox
+{
+  width: 50px;
+  height: 20px;
+}
+.footer
+         {
+           background-color:#00152C;
+           color: white;
+           padding: 10px;
+           text-align: center;
+           margin-top: auto;
+         }
+</style>
+   
+<body>
+    <div class="container">
+    <header>
+       
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dash">Dashboard</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/setting">Settings</a></li>
+            </ul>
+        </nav>
+        <h1>Transactions</h1>
+    </header>
+    
+    <section class="transaction">
+      <div class="amount">
+        <h2>0.0001ETH</h2>
+        <p>$0.23 USD</p>
+      </div>
+     
+      <div class="icons">
+          <table class="table1">
+            <tr>
+              <td><div class="box"><div class="icon"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></div></div> </td>
+              <td><div class="box"><div class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></div> </div> </td>
+              <td><div class="box"><div class="icon"><i class="fa fa-exchange" aria-hidden="true"></i></div> </div> </td>
+              <td><div class="box"><div class="icon"><i class="fa fa-arrows-h" aria-hidden="true"></i></div></div>  </td>
+              <td><div class="box"><div class="icon"><i class="fa fa-line-chart" aria-hidden="true"></i></div> </div> </td>
+            
+          </tr>
+          <tr>
+            <td><h4>Bye & sell</h4></td>
+            <td><h4>Send</h4> </td>
+            <td><h4>Swap</h4></td>
+            <td><h4>Bridge</h4> </td>
+            <td><h4>Portfolio</h4> </td>
+          
+        </tr>
+          </table>
+
+          
+        </div>
+        <div class="buttons">
+          <table class="table2">
+            <tr>
+              <td><div class="buttonbox2"><button href="" class="btn">Tokens</button></div> </td>
+              <td><div class="buttonbox2"><button href="" class="btn">NFts</button></div> </td>
+              <td><div class="buttonbox2"><button href="" class="btn">Activity</button></div> </td>
+              
+            </tr>
+          </table>
+          </div>
+        <table class="resent-trans">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Currency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-11-14 10:30 AM</td>
+              <td>Buy</td>
+              <td>0.05 BTC</td>
+              <td>BTC</td>
+            </tr>
+            <tr>
+              <td>2023-11-13 02:45 PM</td>
+              <td>Sell</td>
+              <td>1.2 ETH</td>
+              <td>ETH</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+     
+    </section>
+
+   
+</div>
+<div class="footer">
+    <p>ThaproCoin@gmail.com</p> 
+</div>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #3498db;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Thapro Crypto App</h1>
+    <p>Transaction History</p>
+  </header>
+
+  <main>
+    <h2>Recent Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023-11-14 10:30 AM</td>
+          <td>Buy</td>
+          <td>0.05 BTC</td>
+          <td>BTC</td>
+        </tr>
+        <tr>
+          <td>2023-11-13 02:45 PM</td>
+          <td>Sell</td>
+          <td>1.2 ETH</td>
+          <td>ETH</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </main>
+
+</body>
+</html>
